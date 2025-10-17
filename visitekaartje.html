@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digitaal Visitekaartje</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .card {
+        background: linear-gradient(135deg, #2c003e, #0d0d0d);
+        color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        width: 320px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .card h2 {
+        margin-bottom: 5px;
+        color: #d6aaff;
+    }
+
+    .card p {
+        margin: 5px 0;
+        color: #ccc;
+        font-size: 14px;
+    }
+
+    .card a {
+        color: #b57aff;
+        text-decoration: none;
+    }
+
+    .card a:hover {
+        text-decoration: underline;
+    }
+
+    .qr-code {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        border: 2px solid #b57aff;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Aimane</h2>
+    <p>Student</p>
+    <p>Website: <a href="https://aimane010-code.github.io/text-v3/" target="_blank">aimane010-code.github.io/text-v3</a></p>
+    <!-- QR-code automatisch genereren -->
+    <img class="qr-code" 
+         src="https://api.qrserver.com/v1/create-qr-code/?data=https://aimane010-code.github.io/text-v3/&size=150x150" 
+         alt="QR-code naar mijn website">
+</div>
+
+</body>
+</html>
