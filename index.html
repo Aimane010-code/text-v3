@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aimane Zougagh - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Reset */
+  * {margin:0; padding:0; box-sizing:border-box;}
+  body {font-family:'Montserrat', sans-serif; background:#0a0a0a; color:#e0e0e0; scroll-behavior:smooth;}
+  a {color:#9b59b6; text-decoration:none;}
+  a:hover {text-decoration:underline;}
+  img {max-width:100%; display:block;}
+
+  /* Hero */
+  header {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg, #1a1a1a, #2e0050);
+    color:#fff;
+    padding:20px;
+  }
+  header img {
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:4px solid #9b59b6;
+    margin-bottom:20px;
+    animation:fadeInDown 1s ease forwards;
+  }
+  header h1 {font-size:3.5em; margin-bottom:10px; animation:fadeIn 1s;}
+  header p {font-size:1.2em; max-width:700px; margin-bottom:20px; color:#ccc; animation:fadeIn 1.2s;}
+  header a.button {
+    padding:12px 30px; background:#9b59b6; color:#fff; border-radius:30px; font-weight:700;
+    text-decoration:none; transition:0.3s; animation:fadeIn 1.4s;
+  }
+  header a.button:hover {background:#b374e0;}
+
+  /* Sections */
+  section {padding:80px 20px; max-width:1000px; margin:auto;}
+  section h2 {color:#9b59b6; font-size:2.5em; margin-bottom:40px; border-bottom:2px solid #9b59b6; display:inline-block; padding-bottom:10px;}
+  .card {background:#1a1a1a; border-left:5px solid #9b59b6; padding:25px; margin-bottom:25px; border-radius:12px; transition:0.3s;}
+  .card:hover {transform:translateY(-5px); box-shadow:0 15px 25px rgba(155,89,182,0.3);}
+  .card h3 {margin-bottom:15px; color:#fff;}
+  .card p, ul {margin-bottom:10px;}
+  ul {padding-left:20px; list-style:square;}
+
+  /* Skill bars */
+  .skill-bar {background:#333; border-radius:25px; overflow:hidden; margin-bottom:15px;}
+  .skill-bar span {display:block; height:20px; background:#9b59b6; width:0%; line-height:20px; color:#fff; text-align:right; padding-right:10px; border-radius:25px;}
+
+  /* Footer */
+  footer {text-align:center; padding:40px 20px; background:#1a1a1a; color:#777; border-top:1px solid #2e0050;}
+
+  /* Animations */
+  @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+  @keyframes fadeInDown {from{opacity:0; transform:translateY(-20px);} to{opacity:1; transform:translateY(0);} }
+
+  /* Responsive */
+  @media(max-width:768px){
+    header h1 {font-size:2.8em;}
+    header p {font-size:1.1em;}
+  }
+</style>
+<script>
+  // Animate skill bars
+  document.addEventListener("DOMContentLoaded", function(){
+    const skills = document.querySelectorAll('.skill-bar span');
+    skills.forEach(skill => {
+      const width = skill.getAttribute('data-width');
+      setTimeout(() => { skill.style.width = width; }, 500);
+    });
+  });
+</script>
+</head>
+<body>
+
+<header>
+  <img src="IMG_3846.JPG" alt="Aimane Zougagh">
+  <h1>Aimane Zougagh</h1>
+  <p>Welbespraakte werkkracht die gedreven is om successen te boeken. Kan uitstekend samenwerken en heeft aan een half woord genoeg. Ervaren keuken professional.</p>
+  <a href="#werkervaring" class="button">Bekijk Werkervaring</a>
+</header>
+
+<section id="werkervaring">
+  <h2>Werkervaring</h2>
+  <div class="card">
+    <h3>Aafje hoofdkantoor (09/2024 – 02/2024) - Rotterdam</h3>
+    <p>Functie: Ondersteunende medewerker</p>
+    <ul>
+      <li>Klanten geholpen aan de balie.</li>
+      <li>Telefoongesprekken beantwoord en tickets verwerkt.</li>
+      <li>Laptop en telefoon klaargezet voor gebruik.</li>
+      <li>Ondersteuning geboden bij Werkbeheer door naar locaties te gaan om klanten te helpen.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Horecamedewerker | Pwc (01/2019 – 01/2020) - Rotterdam</h3>
+    <ul>
+      <li>Klaarmaken en uitserveren van dranken en kleine bestellingen.</li>
+      <li>Bedienen van de spoel- en afwasmachines volgens voorschriften.</li>
+      <li>Sorteren en opruimen van serviesgoed en bestek om de keuken netjes te houden.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Bakker | Banketbakkerij (01/2018 – 08/2018) - Rotterdam</h3>
+    <ul>
+      <li>Zorgen dat bestellingen worden geregistreerd en op tijd besteld.</li>
+      <li>Inkopen van ingrediënten en contact onderhouden met leveranciers.</li>
+      <li>Maken van roosters voor een goede personeelsbezetting.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Bakker | Ammerlaan Retail (01/2017 – 08/2017) - Rotterdam</h3>
+    <ul>
+      <li>Bereiden van deeg en bakken van brood.</li>
+      <li>Zorgen dat de werkplek schoon en netjes werd achtergelaten.</li>
+      <li>Openen en afsluiten van de bakkerij.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="opleiding">
+  <h2>Opleidingen</h2>
+  <div class="card">
+    <h3>Allround IT Systems and Devices, MBO 3</h3>
+    <p>Techniek College, Prins Alexanderlaan (08/2023 – 06/2026) - Status: Nog niet behaald</p>
+  </div>
+  <div class="card">
+    <h3>Assistent Horeca & Voeding, MBO 1</h3>
+    <p>Albeda College, Rotterdam (09/2022 – 06/2023)</p>
+  </div>
+  <div class="card">
+    <h3>Kok, MBO 2</h3>
+    <p>Albeda College, Rotterdam (09/2021 – 06/2022)</p>
+  </div>
+</section>
+
+<section id="vaardigheden">
+  <h2>Vaardigheden & Competenties</h2>
+  <div class="skill-bar"><span data-width="90%">Horeca/Keuken</span></div>
+  <div class="skill-bar"><span data-width="85%">Stressbestendig & Flexibel</span></div>
+  <div class="skill-bar"><span data-width="80%">Word, Excel, PowerPoint</span></div>
+</section>
+
+<section id="talen">
+  <h2>Talen</h2>
+  <ul>
+    <li>Nederlands: Eerste taal</li>
+    <li>Engels: A2 (Elementair)</li>
+  </ul>
+</section>
+
+<section id="certificaten">
+  <h2>Certificaten</h2>
+  <ul>
+    <li>HACCP certificaat</li>
+  </ul>
+</section>
+
+<section id="hobby">
+  <h2>Hobby's</h2>
+  <ul>
+    <li>Gamen</li>
+    <li>Sporten</li>
+    <li>Afspreken met vrienden</li>
+    <li>Knutselen aan computers</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contactgegevens</h2>
+  <p>📧 <a href="mailto:aimanszougagh31@gmail.com">aimanszougagh31@gmail.com</a></p>
+  <p>📞 0685236902</p>
+  <p>🏠 Demeterpad 4, Nederland</p>
+</section>
+
+<footer>
+  &copy; 2025 Aimane Zougagh. Alle rechten voorbehouden.
+</footer>
+
+</body>
+</html>
